@@ -1,0 +1,2 @@
+{"prompt":"Explain what a model card is.","chosen":"A model card is documentation describing a model's intended use, limitations, and evaluation context.","rejected":"It is just a random text file with no defined purpose."}
+{"prompt":"Why validate training data before fine-tuning?","chosen":"Validation helps catch missing fields, malformed records, and quality issues before training begins.","rejected":"There is no reason to validate training data first."}

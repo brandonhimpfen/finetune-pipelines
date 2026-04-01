@@ -1,0 +1,68 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "finetune-pipelines"
+version = "0.1.0"
+description = "Fine-tuning pipelines and recipes for practical LLM training workflows."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+  { name = "Brandon Himpfen" }
+]
+keywords = [
+  "llm",
+  "fine-tuning",
+  "finetuning",
+  "pipelines",
+  "training",
+  "recipes",
+  "sft",
+  "dpo"
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+  "Topic :: Software Development :: Libraries"
+]
+dependencies = [
+  "PyYAML>=6.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0",
+  "ruff>=0.5.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/brandonhimpfen/finetune-pipelines"
+Repository = "https://github.com/brandonhimpfen/finetune-pipelines"
+Issues = "https://github.com/brandonhimpfen/finetune-pipelines/issues"
+
+[project.scripts]
+finetune-pipelines = "finetune_pipelines.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]

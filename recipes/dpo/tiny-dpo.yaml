@@ -1,0 +1,26 @@
+pipeline:
+  type: dpo
+  name: tiny-dpo
+  description: Minimal preference optimization recipe.
+
+model:
+  base_model: mistralai/Mistral-7B-v0.1
+  tokenizer: mistralai/Mistral-7B-v0.1
+  trust_remote_code: false
+
+paths:
+  train_file: examples/data/dpo_train.jsonl
+  output_dir: outputs/tiny-dpo
+
+trainer:
+  epochs: 1
+  batch_size: 1
+  learning_rate: 1.0e-6
+  gradient_accumulation_steps: 4
+  max_seq_length: 1024
+  seed: 42
+  beta: 0.1
+
+metadata:
+  owner: Brandon Himpfen
+  task: preference-optimization

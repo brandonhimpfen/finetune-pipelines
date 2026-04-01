@@ -1,0 +1,29 @@
+pipeline:
+  type: sft
+  name: tiny-sft
+  description: Minimal supervised fine-tuning recipe.
+
+model:
+  base_model: mistralai/Mistral-7B-v0.1
+  tokenizer: mistralai/Mistral-7B-v0.1
+  trust_remote_code: false
+
+paths:
+  train_file: examples/data/sft_train.jsonl
+  output_dir: outputs/tiny-sft
+
+trainer:
+  epochs: 1
+  batch_size: 2
+  learning_rate: 2.0e-5
+  gradient_accumulation_steps: 1
+  max_seq_length: 1024
+  seed: 42
+  log_every: 10
+  save_every: 100
+  lora_r: 16
+  lora_alpha: 32
+
+metadata:
+  owner: Brandon Himpfen
+  task: instruction-following
