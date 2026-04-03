@@ -1,5 +1,10 @@
 # finetune-pipelines
 
+[![GitHub Sponsor](https://srv-cdn.himpfen.io/badges/github/github-flat.svg)](https://github.com/sponsors/brandonhimpfen) &nbsp; 
+[![Buy Me a Coffee](https://srv-cdn.himpfen.io/badges/buymeacoffee/buymeacoffee-flat.svg)](https://buymeacoffee.com/brandonhimpfen) &nbsp; 
+[![Ko-Fi](https://srv-cdn.himpfen.io/badges/kofi/kofi-flat.svg)](https://ko-fi.com/brandonhimpfen) &nbsp; 
+[![PayPal](https://srv-cdn.himpfen.io/badges/paypal/paypal-flat.svg)](https://paypal.me/brandonhimpfen)
+
 Fine-tuning pipelines and recipes for practical LLM training workflows in Python.
 
 `finetune-pipelines` provides a lightweight, extensible structure for building, validating, and running fine-tuning jobs. It is designed as a reusable starting point for teams who want clear configuration, repeatable dataset preparation, and simple recipe-driven execution without locking themselves into a single stack too early.
